@@ -6,6 +6,8 @@ from pydantic import BaseModel
 
 
 class Track(BaseModel):
+    __tablename__ = 'tracks'
+
     id: int
     name: str
     album_id: int
