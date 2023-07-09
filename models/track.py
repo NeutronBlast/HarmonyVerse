@@ -1,17 +1,16 @@
-import decimal
-from typing import Optional
-from uuid import UUID, uuid4
+from sqlalchemy import Column, Integer, String, DECIMAL
+from sqlalchemy.ext.declarative import declarative_base
 
-from pydantic import BaseModel
+Base = declarative_base()
 
 
-class Track(BaseModel):
+class Track(Base):
     __tablename__ = 'tracks'
 
-    id: int
-    name: str
-    album_id: int
-    composer: str
-    milliseconds: int
-    bytes: int
-    unit_price: decimal
+    TrackId = Column(Integer, primary_key=True)
+    Name = Column(String)
+    AlbumId = Column(Integer)
+    Composer = Column(String)
+    Milliseconds = Column(Integer)
+    Bytes = Column(Integer)
+    UnitPrice = Column(DECIMAL)

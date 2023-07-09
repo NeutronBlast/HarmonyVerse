@@ -76,6 +76,7 @@ To get a local copy up and running follow these simple example steps.
     python get-pip.py
   ```
 * [SQLite](https://www.sqlite.org/index.html)
+* [SQLite Browser (Recommended)](https://sqlitebrowser.org/dl/)
 
 ### Installation
 
@@ -87,6 +88,7 @@ To get a local copy up and running follow these simple example steps.
    ```sh
     pip install -r requirements.txt
    ```
+3. Open SQLite Browser and add the `chinook.db` database
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

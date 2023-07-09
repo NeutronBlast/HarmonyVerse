@@ -1,8 +1,11 @@
-from pydantic import BaseModel
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
+
+Base = declarative_base()
 
 
-class Artist(BaseModel):
+class Artist(Base):
     __tablename__ = 'artists'
 
-    id: int
-    name: str
+    ArtistId = Column(Integer, primary_key=True)
+    Name = Column(String)

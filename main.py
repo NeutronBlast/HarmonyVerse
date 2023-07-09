@@ -1,6 +1,9 @@
 from fastapi import FastAPI
+from routes.artist_routes import router as artist_router
 
 app = FastAPI()
+
+app.include_router(artist_router)
 
 
 @app.get("/")
