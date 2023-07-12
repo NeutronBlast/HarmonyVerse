@@ -5,6 +5,16 @@ from models.track import Track
 
 
 def get_all_artists():
+    """Returns all the artists stored in the DB
+
+    Parameters
+    ----------
+
+    Returns
+    ------
+    list
+        List of artists
+    """
     db = SessionLocal()
     artists = db.query(Artist).all()
     db.close()
@@ -12,6 +22,18 @@ def get_all_artists():
 
 
 def get_albums_artist(artist_id):
+    """Returns all the albums by artist
+
+    Parameters
+    ----------
+    artist_id : int
+        Artist ID
+
+    Returns
+    ------
+    list
+        List of albums made by an artist
+    """
     db = SessionLocal()
     albums = db.query(Album).filter(Album.ArtistId == artist_id).all()
     db.close()
@@ -19,6 +41,18 @@ def get_albums_artist(artist_id):
 
 
 def get_songs_artist(artist_id):
+    """Returns all the tracks by artist
+
+    Parameters
+    ----------
+    artist_id : int
+        Artist ID
+
+    Returns
+    ------
+    list
+        List of tracks made by an artist
+    """
     db = SessionLocal()
     songs = (
         db.query(Track)

@@ -96,6 +96,8 @@ To get a local copy up and running follow these simple example steps.
 ## API Documentation
 <!-- USAGE EXAMPLES SCREENSHOTS -->
 
+You can check the API documentation by starting the server and visiting `localhost:8000/docs`
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

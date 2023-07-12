@@ -3,7 +3,19 @@ from models.track import Track
 
 
 def get_song(song_id):
+    """Returns the details about a specific song
+
+    Parameters
+    ----------
+    song_id : int
+        Song ID
+
+    Returns
+    ------
+    dict
+        Song details
+    """
     db = SessionLocal()
-    albums = db.query(Track).filter(Track.TrackId == song_id).first()
+    song = db.query(Track).filter(Track.TrackId == song_id).first()
     db.close()
-    return albums
+    return song
