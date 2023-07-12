@@ -78,7 +78,7 @@ To get a local copy up and running follow these simple example steps.
 * [SQLite](https://www.sqlite.org/index.html)
 * [SQLite Browser (Recommended)](https://sqlitebrowser.org/dl/)
 
-### Installation
+### Installation (Pycharm)
 
 1. Clone the repo
    ```sh
@@ -89,6 +89,25 @@ To get a local copy up and running follow these simple example steps.
     pip install -r requirements.txt
    ```
 3. Open SQLite Browser and add the `chinook.db` database
+
+### Installation (VScode)
+1. Clone the repo
+   ```sh
+   git clone 
+   ```
+2. Install requirements.txt
+   ```sh
+    pip install -r requirements.txt
+   ```
+3. Open SQLite Browser and add the `chinook.db` database
+4. Create venv
+    ```
+    python -m venv .venv
+    ```
+5. Run server
+    ```
+    python -m uvicorn main:app --reload
+    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
